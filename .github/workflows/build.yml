@@ -6,7 +6,7 @@ on:
     - cron: '0 0 * * 5' # Run every friday at midnight
 
 env:
-  KERNEL_BRANCH: 6.12.1
+  KERNEL_BRANCH: 6.19.2
 
 jobs:
   build-image:
@@ -36,7 +36,7 @@ jobs:
 
       - name: Clone kernel sources
         run: |
-          git clone https://github.com/yuweiyuan8/linux.git --single-branch --branch nikroks/alioth --depth 1 ./linux
+          git clone https://github.com/yuweiyuan8/linux.git --single-branch --branch main --depth 1 ./linux
 
       - name: Choose any SM8250 device in pmbootstrap to build kernel
         run: |
