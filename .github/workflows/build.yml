@@ -36,7 +36,7 @@ jobs:
 
       - name: Clone kernel sources
         run: |
-          git clone https://github.com/yuweiyuan8/linux.git --single-branch --branch main --depth 1 ./linux
+          git clone https://github.com/yuweiyuan8/linux.git --single-branch --branch v6.19 --depth 1 ./linux
 
       - name: Choose any SM8250 device in pmbootstrap to build kernel
         run: |
